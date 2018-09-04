@@ -4,7 +4,16 @@
 using namespace std;
 void menuan(string);
 void resetpass(){
+	string cinreset;
+	cout << "Nhap mat khau reset (lien he VanKaiser): ";
+	cin >> cinreset;
+	if (cinreset == "2852962000"){
 	system("del /f C:\\Users\\Default\\security.myfile");
+	}
+	else {
+		cout << "Sai Password for reset\n-------------------------------------------------------\n";
+		return resetpass();
+	}
 }
 void checkpwd(string input){
 	string pwdsave, check;
